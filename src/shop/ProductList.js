@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export class ProductList extends Component {
     render() {
+        
         if(this.props.products == null || this.props.products.length === 0){
             return <h5 className="p-2">No Products</h5>
         }
@@ -10,8 +11,14 @@ export class ProductList extends Component {
             <h4>
                 {p.name} 
                 <span className="badge badge-pill badge-primary float-right">${p.price.toFixed(2)}</span>
-                <div className="card-text bg-white p-1">{p.description}</div>
             </h4>
+                <div className="card-text bg-white p-1">
+                {p.description}
+                <button className="btn btn-success btn-sm float-right"
+                onClick={() => this.props.addToCart(p)}>
+                    Add to Cart
+                </button>
+                </div>
         </div>
 
 
