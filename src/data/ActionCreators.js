@@ -1,4 +1,4 @@
-import {ActionType} from './Types';
+import {ActionType, DataTypes} from './Types';
 //import {data as phData} from './placeHolderData';
 import {RestDataSource} from './RestDataSource';
 
@@ -16,4 +16,9 @@ export const setPageSize = (newSize) => ({
 
 export const setSortProperty = (newProp) => ({
     type: ActionType.DATA_SET_SORT_PROPERTY, payload: newProp
+});
+
+export const placeOrder = (order) => ({
+    type: ActionType.DATA_STORE,
+    payload : dataSource.StoreData(DataTypes.ORDERS,order).then(response => ({dataType: DataTypes.ORDERS, data: response.data}))
 });

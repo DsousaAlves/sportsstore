@@ -1,6 +1,7 @@
 export const DataTypes = {
     PRODUCTS : 'products',
-    CATEGORIES : 'categories'
+    CATEGORIES : 'categories',
+    ORDERS : 'orders'
 }
 
 export const ActionType = {
@@ -9,6 +10,7 @@ export const ActionType = {
     CART_UPDATE : 'cart_update',
     CART_REMOVE : 'cart_delete',
     CART_CLEAR : 'cart_clear',
+    DATA_STORE : 'data_store',
     DATA_SET_SORT_PROPERTY : 'data_set_sort',
     DATA_SET_PAGESIZE : 'data_set_pagesize'
 }
