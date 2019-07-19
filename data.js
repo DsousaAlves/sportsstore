@@ -26,6 +26,8 @@ for(let i = 0; i <= 103; i++){
         email: faker.internet.email(fname, sname),
         address: faker.address.streetAddress(),
         city: faker.address.city(),
+        zip: faker.address.zipCode(),
+        country: faker.address.country(),
         shipped: faker.random.boolean(),
         products: []
     }

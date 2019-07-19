@@ -1,6 +1,6 @@
 const paginateQuery = (query, page = 1, pageSize = 5) => query.drop((page-1) * pageSize).take(pageSize);
 
-const product = ({id}, {db}) => db.get("product").getById(id).value();
+const product = ({id}, {db}) => db.get("products").getById(id).value();
 
 const products = ({category}, {db}) => ({
     totalSize: () => db.get("products")
